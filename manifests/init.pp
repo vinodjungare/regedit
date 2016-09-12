@@ -54,5 +54,16 @@ registry_value { 'HKLM\software\Microsoft\Active Setup\Installed Components\{A50
  data => '1',
 }
 
+# Enable/Disable Windows Shutdown Event Tracker, enable=1 and disable=0
+
+registry_value { 'HKLM\software\policies\microsoft\windows NT\Reliability\ShutdownReasonOn':
+  type => dword,
+  data => '1',
+}
+
+registry_value { 'HKLM\software\policies\microsoft\windows NT\Reliability\ShutdownReasonUI':
+  type => dword,
+  data => '1',
+}
 
 }
